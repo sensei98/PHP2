@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background:transparent;
+}
+/* --------------------------------------------------- */
+    /* HEADER */
+/* --------------------------------------------------- */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li{
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin:0 25px;
+    text-decoration: none;
+}
+li a:hover{
+    /* opacity:0.8; */
+    background-color:#111;
+}
+
+/* --------------------------------------------------- */
+    /* GALLERY */
+/* --------------------------------------------------- */
+body{
+    line-height: 1;
+    background-color: #f6f7f8;
+}
+/* .gallery-links{ */
+    /* width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center; */
+/* } */
+.gallery-links h2{
+    font-family: catamaran;
+    font-size:28px;
+    font-weight:600;
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+}
+.gallery-links p {
+    color:black;
+}
+.gallery-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+.gallery-container a{
+    width:230px;
+    margin:20px 10px 0;
+    text-decoration: none;
+}
+.gallery-container a:hover {
+    opacity:0.8;
+}
+.gallery-container a div {
+    width:100%;
+    height:235px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.gallery-container a h3{
+    font-family: catamaran;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+input[type=text]{
+    padding:5px 10px;
+    margin:10px 10px;
+    display:block;
+    border: 1px solid #ccc;
+    background-color:white;
+    width:230px;
+    box-sizing: border-box;
+
+}
+button[type=submit]{
+    width:20%;
+    background-color:#fd501e;
+    color:#ffff;
+    padding:14px 20px;
+    margin:8px 0;
+    border-radius: 4px;
+    cursor:pointer;
+}
+button[type=submit]:hover{
+    opacity:0.7;
+}
+.gallery-upload{
+    padding:15px;
+    width:100%;
+    background-color: #ccc;
+    
+}
