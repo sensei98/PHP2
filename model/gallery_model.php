@@ -1,36 +1,18 @@
 <?php
-include '../database/dbh.php';
-
-class gallery_model extends DB{
-
-    protected function getAllImages(){
-        $sql = "SELECT * FROM gallery;";
-        $result = $this->getPDOConnection()->query($sql);
-        // while($row = $result->fetch()){
-        //     return $row;
-        // }
-        return $result;
-        
-        
+include '../config/database/dbh.php';
+class Gallery_Model{
+    public function InsertIntoImages($insertVal){
+        $db = new Database;
+        $query = "INSERT INTO images (file_name, uploaded_on) VALUES $insertVal";
+        $stmt = $db->getPDOConnection()->query($query);
+        $stmt->execute();
+        return $stmt;
     }
-
-    protected function InsertIntoGallery($imageTitle,$imageDesc, $imageFullName, $setImageOrder){
-        $sql  = "INSERT INTO gallery (titleGallery,descGallery,imgFullNameGallery,orderGallery) 
-                    VALUES (?,?,?,?);";
-        $result = $this->getPDOConnection()->query($sql);
-        $result->execute([$imageTitle, $imageDesc, $imageFullName, $setImageOrder]);
-        
+    public function GetAllImages(){
+        $db = new Database;
+        $query = "SELECT * FROM images ORDER BY id DESC";
+        $stmt = $db->getPDOConnection()->query($query);
+        $stmt->execute();
+        return $stmt;
     }
-
-    
-    protected function getAllImagesByOrder(){
-        $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";
-        $result = $this->getPDOConnection()->query($sql);
-       
-            return $result;
-        
-        
-    }
-
-
 }

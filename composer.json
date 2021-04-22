@@ -1,0 +1,7 @@
+{
+    "require": {
+        "monolog/monolog": "1.0.*",
+        "setasign/fpdf": "^1.8",
+        "abraham/twitteroauth": "^2.0"
+    }
+}
