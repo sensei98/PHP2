@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-include_once '../config/database/dbh.php';
 include_once '../model/confirm_model.php';
 
 $payment_id = $_POST['id'];

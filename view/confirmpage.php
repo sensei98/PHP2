@@ -1,5 +1,5 @@
 <?php include './inc/header.php';
-      include '../model/confirm_model.php';
+      include '../controller/confirm_controller.php';
 ?>
 
 <!DOCTYPE html>

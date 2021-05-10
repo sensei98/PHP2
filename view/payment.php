@@ -14,9 +14,9 @@
         <h2>payment</h2>
             <form method="post" action="../controller/pay.php">
                 <label for="amount">enter amount</label>
-                <input type="text" id="text" name="amount" placeholder="amount" pattern="^\d+\.\d{2}$" required>
+                <input type="text" id="amount" name="amount" placeholder="Amount €0.00" pattern="^\d+\.\d{2}$" required>
                 <label for="description">description</label>
-                <input type="text" placeholder="Description" name="description" required>
+                <input type="text" placeholder="Description...." name="description" required>
                 <section class="btn-payment">
                 <button type="submit">make payment</button>
                 </section>

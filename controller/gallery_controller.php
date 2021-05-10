@@ -32,8 +32,7 @@ if(isset($_POST['submit'])){
     }
     if(!empty($insertValuesSQL)){
         $insertValuesSQL = trim($insertValuesSQL, ',');
-        // $db = new Database();
-        // $insert = $db->getPDOConnection()->query("INSERT INTO images (file_name, uploaded_on) VALUES $insertValuesSQL");
+
         $model = new Gallery_Model;
         $insert = $model ->InsertIntoImages($insertValuesSQL);
         if($insert){
