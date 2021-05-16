@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 include_once '../model/confirm_model.php';
+require_once('../library/validatePostFields.php');
+$val = new Validate();
 
-$payment_id = $_POST['id'];
+$payment_id = $val->ValidateData($_POST['id']);
 
 $file = fopen('confirm.log','a');
 

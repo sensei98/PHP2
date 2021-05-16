@@ -1,8 +1,6 @@
 <?php
 
-
 if(isset($_POST['submit'])){
-    // include '../config/database/dbh.php';
     include '../model/gallery_model.php';
 
     $targetDir = '../public/img/gallery/';
@@ -39,14 +37,15 @@ if(isset($_POST['submit'])){
             $errorUpload = !empty($errorUpload)?'Upload Error: '.trim($errorUpload, ' | '): '';
             $errorUploadType = !empty($errorUpload)?'File Type Error: '.trim($errorUploadType, ' | '):'';
             $errorMsg = !empty($errorUpload)?'<br/>'.$errorUpload. '<br/>'.$errorUploadType:'<br/>'.$errorUploadType;
-            $statusMsg = "Files are uploaded sucessfully.".$errorMsg;
+            $statusMsg = "<script>window.alert('Files are uploaded sucessfully.')</script>".$errorMsg;
         }
         else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
+            $statusMsg = "<script>window.alert('Sorry, there was an error uploading your file.')</script>";
         }
     }
+
     else{
-        $statusMsg = "Please select a file to upload. ";
+        $statusMsg = "<script>window.alert('Please select a file to upload.')</script> ";
     }
     echo $statusMsg;
 

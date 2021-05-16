@@ -1,6 +1,5 @@
 <?php
     include '../controller/TwitterOAuth.php';
-    // include '../view/inc/header.php';
     $ppic = str_replace("normal","400x400",$feedData[0]->user->profile_image_url_https);
 
     $username = $feedData[0]->user->name;

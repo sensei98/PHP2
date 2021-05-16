@@ -1,15 +1,15 @@
 <?php
 require_once "../mollie-api-php/vendor/autoload.php";
-require_once "../library/validatePHP.php";
-// include '../controller/confirm.php';
+require_once "../library/validatePostFields.php";
 
 $mollie = new \Mollie\Api\MollieApiClient();
-$mollie->setApiKey('test_Ds3fz4U9vNKxzCfVvVHJT2sgW5ECD8');
+$mollie->setApiKey('test_Ds3fz4U9vNKxzCfVvVHJT2sgW5ECD8'); //api key for mollit
 
 $val = new Validate();
 
+//checks for the input fields
 $amount = $val->ValidateData($_POST['amount']);
-$description = $val->ValidateData($_POST['description']);
+$description = $val->ValidateData($_POST['description']); 
 
 
 $payment = $mollie->payments->create([

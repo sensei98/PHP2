@@ -1,4 +1,3 @@
-<?php include 'inc/header.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <title>PAYMENT</title>
 </head>
 <body>
-
+    <?php include 'inc/header.php'?>
     <section class="payment-container" data-router-wrapper>    
         <section class="form-container" data-router-view="payment">
         <h2>payment</h2>

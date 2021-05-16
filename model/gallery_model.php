@@ -1,17 +1,21 @@
 <?php
 include '../config/database/dbh.php';
 class Gallery_Model{
+
+    private $db;
+    public function __construct(){
+        $this->db = new Database();
+    }
+
     public function InsertIntoImages($insertVal){
-        $db = new Database;
         $query = "INSERT INTO images (file_name, uploaded_on) VALUES $insertVal";
-        $stmt = $db->getPDOConnection()->query($query);
+        $stmt = $this->db->getPDOConnection()->query($query);
         $stmt->execute();
         return $stmt;
     }
     public function GetAllImages(){
-        $db = new Database;
         $query = "SELECT * FROM images ORDER BY id DESC";
-        $stmt = $db->getPDOConnection()->query($query);
+        $stmt = $this->db->getPDOConnection()->query($query);
         $stmt->execute();
         return $stmt;
     }

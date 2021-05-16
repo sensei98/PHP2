@@ -1,5 +1,3 @@
-<?php include 'inc/header.php'?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +13,9 @@
 
 </head>
 <body>
+    <?php include 'inc/header.php'?>
     <main data-router-wrapper>
         <section class="container mt-5" data-router-view="pdf">
-
             <form action="../../PHP-2/controller/generatePDF.php" method="post" class="offset-md-3 col-md-6">
                 <h2>Create your own PDF</h2>  
                 <p>Fill out details below and PDF will be downloaded</p>   
@@ -27,7 +25,6 @@
                     <div class="col-md-6"><input type="text" name="lname" placeholder="Last Name" class="form-control" required></div>
                 </section>
                 
-                
                 <section class="mb-2"><input type="email" name="email" placeholder="Email" class="form-control" required></section>
                 <section class="mb-2"><input type="tel" name="phone" placeholder="Phone" class="form-control" required></section>
                 <section class="mb-2"><textarea name="message" placeholder="Your Message" class="form-control"></textarea></section>
@@ -35,8 +32,9 @@
             </form>
         </section>
     </main>
-    <script src = "../scripts/scripts.js"></script>
 
+    <!-- JAVASCRIPT -->
+    <script src = "../scripts/scripts.js"></script>
 
 </body>
 </html>

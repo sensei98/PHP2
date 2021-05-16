@@ -3,12 +3,9 @@ require "../vendor/autoload.php";
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-// $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
-// $content = $connection->get("account/verify_credentials");
 
-// * Set access tokens and API keys
+// * Setting access tokens and API keys
 $consumerKey       = "9SDK1ujsdWieD8SJUE9Y3JK8A";
-
 $consumerSecret    = "U9SHSJwOS8jsHWEbSD72ckB4jSBeimDd32JSHOP8SJW3XNCmv2";
 $accessToken       = "8475324536-iret8h9WISeKmDWFMMNE1YjXca8sxKsd4KsSainZ";
 $accessTokenSecret = "PSDH9YjisD1FZJWNuqK8SISKQ1FqzhiCzkHtrTsjd3kS";

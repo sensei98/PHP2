@@ -1,14 +1,16 @@
 <?php 
 
-require_once  '../../PHP-2/vendor/autoload.php';
+require_once('../../PHP-2/vendor/autoload.php');
 require_once('../../PHP-2/phpqrcode/qrlib.php');
+require_once('../library/validatePostFields.php');
 
-//grabbing variables
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
+$val = new Validate();
+//grabbing variables and making checks 
+$fname = $val->ValidateData($_POST['fname']);
+$lname = $val->ValidateData($_POST['lname']);
+$email = $val->ValidateData($_POST['email']);
+$phone = $val->ValidateData($_POST['phone']);
+$message = $val->ValidateData($_POST['message']);
 
 //creating a pdf instance
 $pdf = new FPDF();

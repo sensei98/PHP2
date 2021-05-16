@@ -1,6 +1,4 @@
-<?php include './inc/header.php';
-    include '../model/gallery_model.php';
-?>
+<?php include '../model/gallery_model.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,7 @@
     <title>Gallery</title>
 </head>
 <body>
+    <?php include './inc/header.php'; ?>
     <section class='gallery-container'>
         <h2>GALLERY</h2>
         <section class="gallery-inner-container">
@@ -21,18 +20,13 @@
             if($result){
                 foreach($result as $row){
                     $imageURL = '../public/img/gallery/'.$row['file_name'];
-                    // $imageURL = imagefilter($imageURL, IMG_FILTER_BRIGHTNESS, 10);
         ?>
-                
-                <img src="<?php echo $imageURL; ?>" alt="">
+                <img src="<?php echo $imageURL; ?>" alt="<?php echo $row['file_name']?>">
                 <?php }
             }
             else{ ?>
                 <p>NO images found</p>
             <?php }?>
-
-        
-
 
                 <form action="../controller/gallery_controller.php" method="post" enctype="multipart/form-data">
                     Select images to Upload
